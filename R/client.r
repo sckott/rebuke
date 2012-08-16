@@ -24,23 +24,39 @@ Client <- setRefClass(
         uri <- str_c(uri, '/', object)
       }
 
+      if (!is.null(subresource)) {
+        uri <- str_c(uri, '/', subresource)
+      }
+
       content(GET(uri, sign()))
     },
 
-    user = function(user) {
-      get('users', user)
+    post = function(resource, object = NULL, subresource = NULL) {
+      uri <- str_c(endpoint, resource)
+
+      if (!is.null(object)) {
+        uri <- str_c(uri, '/', object)
+      }
+
+      if (!is.null(subresource)) {
+        uri <- str_c(uri, '/', subresource)
+      }
+
+      content(POST(uri, sign()))
     },
 
-    followers = function(user) {
-      get('users', user, 'followers')
-    },
+    delete = function(resource, object = NULL, subresource = NULL) {
+      uri <- str_c(endpoint, resource)
 
-    following = function(user) {
-      get('users', user, 'following')
-    },
+      if (!is.null(object)) {
+        uri <- str_c(uri, '/', object)
+      }
 
-    token = function() {
-      get('token')
+      if (!is.null(subresource)) {
+        uri <- str_c(uri, '/', subresource)
+      }
+
+      DELETE(uri, sign())
     }
   )
 )

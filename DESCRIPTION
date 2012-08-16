@@ -13,9 +13,7 @@ Imports:
     stringr
 License: MIT
 Collate:
-    'client.r'
     'authorization.r'
     'configuration.r'
-    'posts.r'
-    'token.r'
+    'client.r'
     'users.r'
