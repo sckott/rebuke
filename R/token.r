@@ -1,6 +1,6 @@
 Client$methods(
   list(
-    token = function() {
+    current_token = function() {
       get('token')
     }
   )
