@@ -17,3 +17,4 @@ Collate:
     'configuration.r'
     'client.r'
     'users.r'
+    'posts.r'
