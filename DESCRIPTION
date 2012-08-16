@@ -1,0 +1,21 @@
+Package: rebuke
+Title: App.net API client
+Version: 0.2.0
+Author: Allen Goodman <allen.goodman@me.com>
+Maintainer: Allen Goodman <allen.goodman@me.com>
+Description: App.net API client
+Depends:
+    R (>= 2.15)
+Imports:
+    httr,
+    rjson,
+    Rook,
+    stringr
+License: MIT
+Collate:
+    'client.r'
+    'authorization.r'
+    'configuration.r'
+    'posts.r'
+    'token.r'
+    'users.r'
